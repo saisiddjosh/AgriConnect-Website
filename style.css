@@ -1,0 +1,9 @@
+setInterval(() => {
+    fetch('https://your-server-url.com/data')  // Replace with actual backend URL
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('temperature').innerText = data.temperature;
+        document.getElementById('humidity').innerText = data.humidity;
+    })
+    .catch(error => console.log('Error fetching data:', error));
+}, 5000);
